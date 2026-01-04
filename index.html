@@ -2,23 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Location Analysis</title>
+
   <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Arial; padding:2rem}
-    nav a{margin-right:1rem; text-decoration:none; color:#0366d6}
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1e40af;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+    }
   </style>
 </head>
+
 <body>
-  <header><h1>Welcome</h1></header>
+  <main class="container">
+    <h1>Company Location Maps</h1>
+    <p class="subtitle">
+      Interactive visualizations of U.S. corporate relocation trends
+    </p>
 
-  <nav>
-    <a href="page1.html">Page 1</a>
-    <a href="page2.html">Page 2</a>
-  </nav>
+    <section class="card-grid">
+      <div class="card">
+        <h2>California Company Exodus</h2>
+        <p>
+          Interactive map showing companies relocating out of California,
+          including origin and destination trends.
+        </p>
+        <a class="btn" href="map1.html">View Map</a>
+      </div>
 
-  <main>
-    <p>Pick one of the pages above to view it.</p>
+      <div class="card">
+        <h2>2025 HQ Moves</h2>
+        <p>
+          Headquarters relocations announced in 2025, visualized by state and
+          metro destination.
+        </p>
+        <a class="btn" href="map2.html">View Map</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>
